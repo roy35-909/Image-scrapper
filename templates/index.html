@@ -216,22 +216,22 @@ form {
             <h1>Image Downloader</h1>
         </div>
         <div class="right">
-            <form >
-                <input type="text" id="urlInput" placeholder="Enter Your URL">
+            <form method="post" action="/scrap_image">
+                <input type="text" id="urlInput" placeholder="Enter Your URL" name="url">
                 <div class="cheakbox">
                     <div class="checkbox-wrapper-14">
-                        <input id="s1-14" type="checkbox" class="switch">
+                        <input id="s1-14" type="checkbox" class="switch" name="crop">
                         <label for="s1-14">Crop</label>
                       </div>
                       <div class="checkbox-wrapper-14">
-                        <input id="s1-14" type="checkbox" class="switch">
+                        <input id="s1-14" type="checkbox" class="switch" name = "upscale">
                         <label for="s1-14">Upscale</label>
                       </div>
                 </div>
           
                 <input id="downloadBtn" type="submit" value="Start"></input>
                 <div class="status-box">
-                  <div id="loading" class="">Status : <span class="blue">Processing </span></div>
+                  <div id="loading" class="">Status : <span class="blue">{{status}}</span></div>
                 </div>
                 
                 
